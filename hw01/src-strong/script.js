@@ -26,7 +26,7 @@ d3.csv("../data.csv").then((data) => {
     legendSvg
         .selectAll("rect")
         .data([
-        "作業一",
+        "HW1",
         "作業二",
         "作業三",
         "作業四",
@@ -41,14 +41,14 @@ d3.csv("../data.csv").then((data) => {
         .append("rect")
         .attr("x", (d, i) => i *70+20)
         .attr("y", 10)
-        .attr("width", 15)
+        .attr("width", 25)
         .attr("height", 15)
         .style("fill", colorScale);
 
     legendSvg
         .selectAll("text")
         .data([
-        "作業一",
+        "HW1",
         "作業二",
         "作業三",
         "作業四",
@@ -105,7 +105,8 @@ d3.csv("../data.csv").then((data) => {
         .append("rect")
         .attr("x", (d) => xScale(d[0]))
         .attr("y",  (d, i) => yScale(data[i]["班級"] + " - " + data[i]["學號"] + " - " + data[i]["姓名"]))
-        .attr("width", (d) => xScale(d[1]) - xScale(d[0]))
+        .attr("width", 25)
+        // .attr("width", (d) => xScale(d[1]) - xScale(d[0]))
         .attr("height", yScale.bandwidth());
 
 
