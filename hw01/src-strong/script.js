@@ -104,7 +104,7 @@ d3.csv("../data.csv").then((data) => {
         .enter()
         .append("rect")
         .attr("x", (d) => xScale(d[0]))
-        .attr("y",  (d, i) => yScale(data[i]["班級"] + " - " + data[i]["學號"] + " - " + data[i]["姓名"]))
+        .attr("y",  (d, i) => yScale(data[i]["學號"] + " - " + data[i]["姓名"]))
         .attr("width", 25)
         // .attr("width", (d) => xScale(d[1]) - xScale(d[0]))
         .attr("height", yScale.bandwidth());
