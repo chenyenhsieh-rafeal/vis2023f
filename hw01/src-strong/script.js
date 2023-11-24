@@ -26,7 +26,7 @@ d3.csv("../data.csv").then((data) => {
     legendSvg
         .selectAll("rect")
         .data([
-        "HW1",
+        "作業一",
         "作業二",
         "作業三",
         "作業四",
@@ -48,7 +48,7 @@ d3.csv("../data.csv").then((data) => {
     legendSvg
         .selectAll("text")
         .data([
-        "HW1",
+        "作業一",
         "作業二",
         "作業三",
         "作業四",
@@ -81,7 +81,7 @@ d3.csv("../data.csv").then((data) => {
     const series = d3
         .stack()
         .keys([
-        "作業一",
+        "HW1",
         "作業二",
         "作業三",
         "作業四",
