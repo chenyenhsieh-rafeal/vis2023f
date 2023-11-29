@@ -14,7 +14,7 @@ const svg = d3
 d3.csv("../data.csv").then((data) => {
 
     
-    const colorScale = d3.scaleOrdinal(d3.schemePastel2);
+    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
    
     const legendSvg = d3
@@ -41,7 +41,7 @@ d3.csv("../data.csv").then((data) => {
         .append("rect")
         .attr("x", (d, i) => i *70+20)
         .attr("y", 10)
-        .attr("width", 25)
+        .attr("width", 15)
         .attr("height", 15)
         .style("fill", colorScale);
 
@@ -104,9 +104,8 @@ d3.csv("../data.csv").then((data) => {
         .enter()
         .append("rect")
         .attr("x", (d) => xScale(d[0]))
-        .attr("y",  (d, i) => yScale(data[i]["學號"] + " - " + data[i]["姓名"]))
-        .attr("width", 25)
-        // .attr("width", (d) => xScale(d[1]) - xScale(d[0]))
+        .attr("y",  (d, i) => yScale(data[i]["班級"] + " - " + data[i]["學號"] + " - " + data[i]["姓名"]))
+        .attr("width", (d) => xScale(d[1]) - xScale(d[0]))
         .attr("height", yScale.bandwidth());
 
 
@@ -122,7 +121,3 @@ d3.csv("../data.csv").then((data) => {
         .attr("class", "y-axis")
         .call(d3.axisLeft(yScale));
 });
-
-
-
-
