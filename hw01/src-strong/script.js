@@ -14,7 +14,7 @@ const svg = d3
 d3.csv("../data.csv").then((data) => {
 
     
-    const colorScale = d3.scaleOrdinal(d3.schemeCategory2);
+    const colorScale = d3.scaleOrdinal([`#383867`, `#584c77`, `#33431e`, `#a36629`, `#92462f`, `#b63e36`, `#b74a70`, `#946943`]);
 
    
     const legendSvg = d3
@@ -48,16 +48,16 @@ d3.csv("../data.csv").then((data) => {
     legendSvg
         .selectAll("text")
         .data([
-        "作業一",
-        "作業二",
-        "作業三",
-        "作業四",
-        "作業五",
-        "作業六",
-        "作業七",
-        "作業八",
-        "作業九",
-        "作業十",
+        "HW1",
+        "HW2",
+        "HW3",
+        "HW4",
+        "HW5",
+        "HW6",
+        "HW7",
+        "HW8",
+        "HW9",
+        "HW10",
         ])
         .enter()
         .append("text")
