@@ -14,7 +14,7 @@ const svg = d3
 d3.csv("../data.csv").then((data) => {
 
     
-    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    const colorScale = d3.scaleOrdinal(d3.schemeCategory2);
 
    
     const legendSvg = d3
