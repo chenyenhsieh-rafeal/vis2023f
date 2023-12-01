@@ -1,0 +1,14 @@
+{
+  "name": "9d03338786b70e9f",
+  "main": "9d03338786b70e9f@15.js",
+  "version": "15.0.0",
+  "homepage": "https://observablehq.com/d/9d03338786b70e9f",
+  "author": {
+    "name": "Mark Hsieh's Workspace",
+    "url": "https://observablehq.com/@mark-hsieh-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
